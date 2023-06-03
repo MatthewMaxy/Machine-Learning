@@ -8,8 +8,8 @@ wine = load_wine()
 X = wine.data
 y = wine.target
 
-# print(X.shape)
-# print(pd.Series(y).unique())
+print(X.shape)
+print(pd.Series(y).unique())
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
 clf = DecisionTreeClassifier(criterion='entropy',
                              random_state=30,
@@ -22,7 +22,7 @@ clf = DecisionTreeClassifier(criterion='entropy',
 clf = clf.fit(X_train, y_train)
 print(clf.score(X_test, y_test))
 feature_names = ['酒精', '苹果酸', '灰', '灰的碱性', '镁', '总酚', '类黄酮', '非黄烷类酚类', '花青素', '颜色强度', '色调', '稀释葡萄酒', '脯氨酸']
-class_names =["拉菲", "雪莉", "巴贝拉"]
+class_names = ["拉菲", "雪莉", "巴贝拉"]
 dot_data = tree.export_graphviz(clf,
                                 feature_names=feature_names,
                                 class_names=class_names,
