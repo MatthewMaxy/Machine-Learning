@@ -1,4 +1,4 @@
-# machine_learning
+# MachineLearning
 
-#### 介绍
-在学习机器学习过程中测试的一些代码
+#### Introduction
+some codes when I learned basic Machine Learning methods
